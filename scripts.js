@@ -33,8 +33,8 @@ for (let i = 0; i < 3; i++) {
 
   task.push({
       id: updatedId,
-      title: "aiub",
-      description:"iasuf",
+      title: prompt("Please enter your task's title."),
+      description: prompt("Please enter your task description."),
       status: "asojf",
     });
     updatedId++
