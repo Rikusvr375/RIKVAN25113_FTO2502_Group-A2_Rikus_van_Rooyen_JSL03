@@ -1,3 +1,4 @@
+  
   let task = [];
 
 // Initial tasks
@@ -23,21 +24,40 @@
     });
 
 
-// Code for incremented id's
-  
-let updatedId = task[task.length-1].id+1;
-
 // New Tasks
 
-for (let i = 0; i < 3; i++) {
+// Code for incremented id's
+  
+  let updatedId = task[task.length-1].id+1;
+
+
+// Code that allows prompts to run 3 times 
+ 
+  for (let i = 0; i < 3; i++) {
+  const title = prompt(`Please enter your task ${updatedId} title.`);
+  const description = prompt(`Please enter your task ${updatedId} description.`);
+  let status = prompt(`Enter task ${updatedId} status (todo, doing, done):`).toLowerCase();
+  
+// Code that secures the right status has been entered
+
+  while (
+    status !== "todo" &&
+    status !== "doing" &&
+    status !== "done"
+  ) {
+    alert("Invalid status. Please enter `todo`, `doing` or `done`.")
+   status = prompt(`Enter task ${updatedId} status (todo, doing, done):`).toLowerCase();
+  }
+
+// Order that prompts are shown in
 
   task.push({
       id: updatedId,
-      title: prompt("Please enter your task's title."),
-      description: prompt("Please enter your task description."),
-      status: "asojf",
+      title: title,
+      description: description,
+      status: status
     });
     updatedId++
-  }
+  };
   
-
+console.log("All tasks:",task);
