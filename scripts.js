@@ -36,18 +36,16 @@
   for (let i = 0; i < 3; i++) {
   const title = prompt(`Please enter your task ${updatedId} title.`);
   const description = prompt(`Please enter your task ${updatedId} description.`);
-  let status = prompt(`Enter task ${updatedId} status (todo, doing, done):`).toLowerCase();
+  let status;
   
 // Code that secures the right status has been entered
 
-  while (
-    status !== "todo" &&
-    status !== "doing" &&
-    status !== "done"
-  ) {
-    alert("Invalid status. Please enter `todo`, `doing` or `done`.")
-   status = prompt(`Enter task ${updatedId} status (todo, doing, done):`).toLowerCase();
+do {
+  status = prompt(`Enter task ${updatedId} status (todo, doing, done):`).toLowerCase();
+  if (status !== "todo" && status !== "doing" && status !== "done") {
+      alert("Invalid status. Please enter `todo`, `doing`, or `done`.");
   }
+} while (status !== "todo" && status !== "doing" && status !== "done");
 
 // Order that prompts are shown in
 
