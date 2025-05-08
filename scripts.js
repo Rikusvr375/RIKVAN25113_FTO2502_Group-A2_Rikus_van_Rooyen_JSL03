@@ -30,7 +30,6 @@
   
   let updatedId = task[task.length-1].id+1;
 
-
 // Code that allows prompts to run 3 times 
  
   for (let i = 0; i < 3; i++) {
@@ -59,3 +58,9 @@ do {
   };
   
 console.log("All tasks:",task);
+
+// Code for array with tasks that are done
+
+const doneTasks = task.filter(stat => stat.status === "done");
+
+console.log("Completed tasks:",doneTasks);
