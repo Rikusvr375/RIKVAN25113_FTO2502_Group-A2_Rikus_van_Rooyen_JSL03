@@ -23,7 +23,6 @@
       status: "done",
     });
 
-
 // New Tasks
 
 // Code for incremented id's
@@ -46,7 +45,7 @@ do {
   }
 } while (status !== "todo" && status !== "doing" && status !== "done");
 
-// Order that prompts are shown in
+// Specific order that prompts are shown in
 
   task.push({
       id: updatedId,
@@ -57,10 +56,16 @@ do {
     updatedId++
   };
   
-console.log("All tasks:",task);
+// Code to alert the user of the quantity of tasks
+
+  alert("There are enough tasks on your board, please check them in the console"),
+
+// Code for array with all tasks
+
+  console.log("All tasks:",task);
 
 // Code for array with tasks that are done
 
-const doneTasks = task.filter(stat => stat.status === "done");
+  const doneTasks = task.filter(stat => stat.status === "done");
 
-console.log("Completed tasks:",doneTasks);
+  console.log("Completed tasks:",doneTasks);
